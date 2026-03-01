@@ -5,7 +5,19 @@ This repo covers the "BioTrove_1" team approach to the 2025 ML+X Machine Learnin
 ## Statement on use of code from external sources
 During the creation of our models, code was used from several online sources including forums such as stackoverflow and LLM models such as chatgpt or gemini. 
 
-#
+## Structure of Repo - How to Use
+In order to share the work that each of the BioTrove_1 team members did on their own employing different approaches to tackle the challenge, each of the three team members has their own files in this repo where we each show our own unique models/approaches. These files can be identified by the first name of each team member (e.g. Chenchen, Zhixing, Michal). 
+
+## Reproducing code
+The data, both image files and corresponding metadata csv, can be found on the [Clustering BioTrove kaggle competition page](https://www.kaggle.com/competitions/biotrove-clustering/overview). See individual team member files for code to reproduce results. All code is in the **Python** language. Be sure to install required Python Packages. 
+
+## Background
+### Original BioTrove Dataset
+The original BioTrove dataset is described as "the largest publicly accessible dataset designed to advance AI applications in biodiversity". It was curated from the iNaturalist platform as part of an effort spanning several different universities in the United States, and includes 161.9 million images of living organisms with taxonomic information provided in metadata. It was released in 2024. A plethora of information about the original BioTrove dataset, including but not limited to: link to original paper, github repository, and example images, can be found [here](https://baskargroup.github.io/BioTrove/).
+
+
+
+
 
 
 
