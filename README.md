@@ -34,11 +34,15 @@ Sample of Clustering-Biotrove images by family
 ## BioTrove_1 Team Approach to Clustering-BioTrove Challenge
 This challenge was each of our first experiences in a deep learning competition. As such, we kept our approach simple and consistent throughout the competition. Our general approach was to use some sort of deep learning architecture (CNN, ViT, etc.) to extract image embeddings from the image data, and then use some some unsupervised clustering algorithm (kmeans, ledien, etc.) to cluster the embeddings into genus-and species-level groups. We started by using a pretrained (on ImageNet) ResNet50 model to extract embeddings at a single layer and then clustering via kmeans. This strategy evolved to extracting at two layers (layer 3 and avg. pool layer) to capture some hierchical characheristic difference in images which would help distinguish the more general genus-level differences and the more local species-level differences in images. This evolved to trying many different clustering approaches, supervised contrastive learning with the family labels, pretrained vision transformer models for embedding extraction, and more.
 
-## Model Score Comparison
+## Model Scores
+### Comparison chart with descriptions and NMI scores
 ![Model scores part 1](biotrove_model_scores_1.png)
 ![Model scores part 2](biotrove_model_scores_2.png)
 ![Model scores part 3](biotrove_model_scores_3.png)
 ![Model scores part 4](biotrove_model_scores_4.png)
+
+### Non-exhaustive plot of model NMI scores.
+![model_results](model_results_overview.png)
 
 
 
