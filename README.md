@@ -9,7 +9,7 @@ During the creation of our models, code was used from several online sources inc
 In order to share the work that each of the BioTrove_1 team members did on their own employing different approaches to tackle the challenge, each of the three team members has their own files in this repo where we each show our own unique models/approaches. These files can be identified by the first name of each team member (e.g. Chenchen, Zhixing, Michal). 
 
 ## Reproducing code
-The data, both image files and corresponding metadata csv, can be found on the [Clustering BioTrove kaggle competition page](https://www.kaggle.com/competitions/biotrove-clustering/overview). See individual team member files for code to reproduce results. All code is in the **Python** language. Be sure to install required Python Packages. 
+The data, both image files and corresponding metadata csv, can be found on the [Clustering BioTrove kaggle competition page](https://www.kaggle.com/competitions/biotrove-clustering/overview). See individual team member files for code to reproduce results. All code is in the **Python** language. Be sure to install required Python Packages. **PyTorch** was used for deep learning models.
 
 ## Background
 ### Original BioTrove Dataset
@@ -27,8 +27,12 @@ The "Clustering BioTrove" challenge was created by the ML+X machine learning org
 ![clustering_biotrove_pdf](clustering_biotrove_families_pdf.png)
 Taxonomic families sorted by probability density
 
+
 ![clustering biotrove data sample](clustering_biotrove_data_sample.png)
 Sample of Clustering-Biotrove images by family
+
+## BioTrove_1 Team Approach to Clustering-BioTrove Challenge
+This challenge was each of our first experiences in a deep learning competition. As such, we kept our approach simple and consistent throughout the competition. Our general approach was to use some sort of deep learning architecture (CNN, ViT, etc.) to extract image embeddings from the image data, and then use some some unsupervised clustering algorithm (kmeans, ledien, etc.) to cluster the embeddings into genus-and species-level groups. We started by using a pretrained (on ImageNet) ResNet50 model to extract embeddings at a single layer and then clustering via kmeans. This strategy evolved to extracting at two layers (layer 3 and avg. pool layer) to capture some hierchical characheristic difference in images which would help distinguish the more general genus-level differences and the more local species-level differences in images. This evolved to trying many different clustering approaches, supervised contrastive learning with the family labels, pretrained vision transformer models for embedding extraction, and more.
 
 
 
